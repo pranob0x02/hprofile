@@ -1,1 +1,16 @@
-# TEST
+name: GitHub Actions CI
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  Testing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        run: echo "Test"
